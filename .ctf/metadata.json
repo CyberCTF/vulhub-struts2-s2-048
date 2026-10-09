@@ -4,11 +4,5 @@
   "question": "Exploit S2-048 through the showcase's Struts 1 integration page to run commands and get a shell.",
   "category": "WEB",
   "difficulty": 2,
-  "evidence_kind": "SECRET",
-  "capabilities": [
-    "ognl-injection",
-    "remote-code-execution",
-    "java",
-    "struts2"
-  ]
+  "evidence_kind": "SECRET"
 }
