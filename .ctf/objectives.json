@@ -1,0 +1,73 @@
+{
+  "objectives": [
+    {
+      "key": "main",
+      "title": "Read the flag",
+      "prompt": "Make the Struts 1 integration page evaluate an OGNL expression, run a command and read /ctf/flag.",
+      "check": {
+        "evidence": "SECRET",
+        "format": "FLAG{%s}"
+      },
+      "dev": "FLAG{dev-vulhub-struts2-s2-048}",
+      "hints": [
+        "Open the Struts 1 integration example (Save Gangster) and see what it does with the name you give it. Read the S2-048 advisory.",
+        "The flag is at /ctf/flag."
+      ],
+      "steps": [
+        {
+          "key": "framework",
+          "title": "Identify the framework",
+          "prompt": "Which Java web framework serves the showcase? (name only)",
+          "check": {
+            "answer": [
+              "struts",
+              "struts2",
+              "struts 2",
+              "apache struts",
+              "apache struts 2",
+              "apache struts2"
+            ]
+          }
+        },
+        {
+          "key": "advisory",
+          "title": "Name the advisory",
+          "prompt": "Which Struts security bulletin covers this bug?",
+          "check": {
+            "answer": [
+              "s2-048",
+              "s2048"
+            ]
+          }
+        },
+        {
+          "key": "plugin",
+          "title": "Find the component",
+          "prompt": "Which Struts2 plugin is vulnerable? (plugin name)",
+          "check": {
+            "answer": [
+              "struts 1 plugin",
+              "struts1 plugin",
+              "struts 1",
+              "struts1",
+              "struts-1 plugin",
+              "struts1-plugin"
+            ]
+          }
+        },
+        {
+          "key": "language",
+          "title": "Name the language",
+          "prompt": "Which expression language evaluates the action message? (acronym)",
+          "check": {
+            "answer": [
+              "ognl",
+              "object-graph navigation language",
+              "object graph navigation language"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
